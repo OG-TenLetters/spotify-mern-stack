@@ -7,49 +7,77 @@
   "sessions": {
     "default": [
       {
-        "name": "hello",
+        "name": "Playground",
         "autoExecuteCommands": true,
-        "icon": "person",
-        "color": "terminal.ansiGreen",
+        "icon": "flame",
+        "color": "terminal.ansiBrightRed",
         "commands": [
-          "echo hello"
+          "clear; Write-Host \"Good Morning! Don't forget your water!\" -ForegroundColor Yellow"
         ]
       },
       [
         {
-          "name": "docker:ros",
+          "name": "Frontend",
+          "autoExecuteCommands": true,
+          "icon": "debug-breakpoint-log-unverified",
+          "color": "terminal.ansiBlue",
+          "cwd": "./frontend",
           "commands": [
-            ""
+            "clear; Write-Host \"Frontend Log Ready\" -ForegroundColor Blue"
           ]
         },
         {
-          "name": "docker:k8s",
-          "commands": [
-            ""
-          ]
+          "name": "Frontend Server",
+          "autoExecuteCommands": true,
+          "icon": "debug-breakpoint-log",
+          "color": "terminal.ansiBrightBlue",
+          "cwd": "./frontend",
+          "commands": ["npm run dev"]
         }
       ],
       [
         {
-          "name": "docker:nats",
+          "name": "Backend",
+          "autoExecuteCommands": true,
+          "icon": "circle-outline",
+          "color": "terminal.ansiGreen",
+          "cwd": ".\\backend",
           "commands": [
-            ""
+            "clear; Write-Host \"Backend Log Ready\" -ForegroundColor Green"
           ]
         },
         {
-          "name": "docker:fleet",
-          "commands": [
-            ""
-          ]
+          "name": "Backend Server",
+          "autoExecuteCommands": true,
+          "icon": "circle-filled",
+          "color": "terminal.ansiBrightGreen",
+          "cwd": ".\\backend",
+          "commands": ["npm run dev"]
+        }
+      ],
+      [
+        {
+          "name": "Songs Data",
+          "autoExecuteCommands": true,
+          "icon": "music",
+          "color": "terminal.ansiBrightMagenta",
+          "cwd": ".\\backend",
+          "commands": [""]
+        },
+        {
+          "name": "Albums Data",
+          "autoExecuteCommands": true,
+          "icon": "layout-activitybar-left",
+          "color": "terminal.ansiBrightMagenta",
+          "cwd": ".\\backend",
+          "commands": [""]
         }
       ]
     ],
     "saved-session": [
       {
         "name": "connect",
-        "commands": [
-          ""
-        ]
+        "commands": [""]
       }
     ]
   }
