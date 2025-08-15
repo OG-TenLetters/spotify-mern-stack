@@ -6,10 +6,10 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const fortmatDuration = (seconds: number) => {
-  const minutes = Math.floor(seconds / 60)
-  const remainingSeconds = seconds % 60
-  return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`
-}
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
+};
 
 const AlbumPage = () => {
   const { albumId } = useParams();
@@ -18,9 +18,9 @@ const AlbumPage = () => {
   useEffect(() => {
     if (albumId) fetchAlbumById(albumId);
   }, [fetchAlbumById, albumId]);
-  
+
   if (isLoading) return null;
-  
+
   return (
     <div className="h-full">
       <ScrollArea className="h-full">
@@ -106,7 +106,7 @@ const AlbumPage = () => {
                         {song.createdAt?.split("T")[0]}
                       </div>
                       <div className="flex items-center">
-                      {fortmatDuration(song.duration)}
+                        {fortmatDuration(song.duration)}
                       </div>
                     </div>
                   ))}
