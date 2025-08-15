@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
+import dotenv from "dotenv"
 import { clerkMiddleware } from '@clerk/express'
 import fileUpload from "express-fileupload"
 import { connectDB } from "./lib/db.js";
@@ -13,7 +13,7 @@ import songRoutes from "./routes/song.route.js";
 import albumRoutes from "./routes/album.route.js";
 import statRoutes from "./routes/stat.route.js";
 
-dotenv.config();
+ dotenv.config();
 
 const __dirname = path.resolve();
 const app = express();
